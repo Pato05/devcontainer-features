@@ -1,0 +1,17 @@
+{
+    "id": "flyway-cli",
+    "version": "1.0.0",
+    "name": "Flyway CLI",
+    "description": "Installs Flyway to manage database migrations",
+    "options": {
+        "version": {
+            "type": "string",
+            "proposals": ["10.17.3"],
+            "default": "10.17.3",
+            "description": "Select or enter a valid Flyway CLI version."
+        }
+    },
+    "installsAfter": [
+        "ghcr.io/devcontainers/features/common-utils"
+    ]
+}
