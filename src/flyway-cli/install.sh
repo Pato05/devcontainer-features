@@ -95,7 +95,7 @@ if [ ! -f "flyway.tar.gz" ]; then
 fi
 
 ACTUAL_SHA1=`sha1sum flyway.tar.gz | awk '{print $1;}'`
-if [ "$EXPECTED_SHA1" -ne "$ACTUAL_SHA1" ]; then
+if ! [ "$EXPECTED_SHA1" = "$ACTUAL_SHA1" ]; then
   echo "$EXPECTED_SHA1 !== $ACTUAL_SHA1"
   echo "[x] Checksums don't match. Install failed.";
   exit 1;
